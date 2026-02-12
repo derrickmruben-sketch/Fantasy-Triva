@@ -115,8 +115,8 @@
 
             if (matches.length > 0) {
                 dropdown.innerHTML = matches.map(m => `
-                    <div class="autocomplete-item" onclick="selectPlayer(${playerNum}, '${posId}', '${m.player_name}', ${m.fantasy_points_ppr})">
-                        ${m.player_name} (${m.position}) - ${parseFloat(m.fantasy_points_ppr).toFixed(1)} pts
+                    <div class="autocomplete-item" onclick="selectPlayer(${playerNum}, '${posId}', '${m.player_name}', ${m.total_fantasy_points_ppr})">
+                        ${m.player_name} (${m.position}) - ${parseFloat(m.total_fantasy_points_ppr).toFixed(1)} pts
                     </div>
                 `).join('');
                 dropdown.classList.remove('hidden');
@@ -144,3 +144,4 @@
     </script>
 </body>
 </html>
+
